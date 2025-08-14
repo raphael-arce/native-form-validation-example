@@ -1,6 +1,6 @@
 import { type FormEvent, useState } from "react";
 import "./App.css";
-import { TextInput } from "./assets/text-input.tsx";
+import { TextInput } from "./components/text-input.tsx";
 
 function App() {
   const [isFormValid, setIsFormValid] = useState(false);
@@ -13,6 +13,7 @@ function App() {
     event.preventDefault();
 
     event.currentTarget.reset();
+    setIsFormValid(false);
   };
 
   return (
